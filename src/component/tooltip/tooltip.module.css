@@ -1,0 +1,31 @@
+.tooltipContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltipContent {
+  display: inline-block;
+}
+
+.tooltip {
+  position: absolute;
+  top: -12%;
+  left: 65%;
+  transform: translateX(-50%);
+  background-color: gray;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px 10px 0 10px;
+  border-style: solid;
+  border-color: gray transparent transparent transparent;
+}

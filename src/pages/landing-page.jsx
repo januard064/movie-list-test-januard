@@ -1,14 +1,18 @@
 import React from "react";
 
-import { PhotoGalery } from "../component";
+import { PhotoGalery, Tooltip } from "../component";
 
-const LandingPage = () => {
+const LandingPage = (props) => {
 
-    return(
-        <div>
-            <PhotoGalery />
-        </div>
-    )
-}
 
-export default LandingPage
+
+  return (
+    <div>
+      <Tooltip text={"Facere blanditiis ducimus facere."}>
+        <PhotoGalery />
+      </Tooltip>
+    </div>
+  );
+};
+
+export default LandingPage;

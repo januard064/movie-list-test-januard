@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./photo-galery.module.css";
 
 import { RatingWidget } from "../rating-widget";
+import { Tooltip } from "../tooltip";
 
 export const PhotoGalery = () => {
   return (
@@ -13,7 +14,6 @@ export const PhotoGalery = () => {
         className={styles.image}
       />
       <RatingWidget rating={4} />
-      <div></div>
       <div className={styles.movieTitle}>Facere blanditiis ducimus facere.</div>
     </div>
   );
