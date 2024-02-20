@@ -3,18 +3,13 @@ import React from "react";
 import styles from "./photo-galery.module.css";
 
 import { RatingWidget } from "../rating-widget";
-import { Tooltip } from "../tooltip";
 
-export const PhotoGalery = () => {
+export const PhotoGalery = ({ movie }) => {
   return (
     <div className={styles.cardContainer}>
-      <img
-        src={"https://via.placeholder.com/640x480.png/005544?text=Animal+qui"}
-        alt="Galery Photo"
-        className={styles.image}
-      />
-      <RatingWidget rating={4} />
-      <div className={styles.movieTitle}>Facere blanditiis ducimus facere.</div>
+      <img src={movie.image_url} alt={movie.title} className={styles.image} />
+      <RatingWidget rating={movie.rating} />
+      <div className={styles.movieTitle}>{movie.title}</div>
     </div>
   );
 };
