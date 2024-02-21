@@ -5,21 +5,18 @@ import styles from "./landing-page.module.css";
 import Carousel from "../component/carousel";
 
 const LandingPage = (props) => {
-  const { movieList } = props;
+  const { movieList, featureMovie } = props;
 
   return (
     <div>
       <Carousel>
-        <img
-          src="https://via.placeholder.com/640x480.png/005544?text=Animal+qui"
-          alt="carousel"
-          style={{ width: "100%", height: "450px", objectFit: "cover" }}
-        />
-        <img
-          src="https://via.placeholder.com/640x480.png/005544?text=Animal+qui"
-          alt="carousel"
-          style={{ width: "100%", height: "450px", objectFit: "cover" }}
-        />
+        {featureMovie.map((movie, index) => (
+          <img
+            src={movie.image_url}
+            alt={movie.title}
+            style={{ width: "100%", height: "450px", objectFit: "cover" }}
+          />
+        ))}
       </Carousel>
 
       <div className={styles.gridListMovie}>
